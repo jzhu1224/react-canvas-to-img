@@ -15,12 +15,12 @@ npm install --save react-canvas-to-img
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-canvas-to-img'
+import CanvasToImg from 'react-canvas-to-img'
 import 'react-canvas-to-img/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <CanvasToImg><canvas /></CanvasToImg>
   }
 }
 ```
