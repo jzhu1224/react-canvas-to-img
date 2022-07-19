@@ -5,6 +5,11 @@
   "author": "jzhu1224",
   "license": "MIT",
   "repository": "jzhu1224/react-canvas-to-img",
+  "keywords": [
+    "react",
+    "canvas",
+    "img"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
