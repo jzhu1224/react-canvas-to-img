@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { CanvasToImg } from '.'
 
-describe('ExampleComponent', () => {
+describe('CanvasToImg', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(CanvasToImg).toBeTruthy()
   })
 })
