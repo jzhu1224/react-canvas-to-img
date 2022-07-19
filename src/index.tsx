@@ -1,5 +1,4 @@
 import * as React from 'react'
-import ReactDOM from 'react-dom'
 
 type ICanvasToImgProps = {
   children: React.ReactElement
@@ -7,23 +6,22 @@ type ICanvasToImgProps = {
 
 export const CanvasToImg = ({children}: ICanvasToImgProps) => {
 
-  const rootRef = React.useRef<HTMLDivElement>(null);
   const imgRef = React.useRef<HTMLImageElement>(null);
 
   React.useEffect(() => {
     if(!imgRef.current) {
       return;
     }
-    const canvas: any =  ReactDOM.findDOMNode(rootRef.current)?.firstChild?.nextSibling
-    if (!canvas) {
-      return;
+    const canvas = document.getElementsByTagName('canvas')[0]
+    if(!canvas) {
+      return
     }
     const data = canvas.toDataURL();
     imgRef.current.src = data;
     imgRef.current.style.height = canvas.style.height;
     imgRef.current.style.width = canvas.style.width;
-    rootRef.current?.removeChild(canvas);
+    canvas.parentElement?.removeChild(canvas)
   }, [])
 
-  return <div ref={rootRef}> {children} <img alt='' ref={imgRef} /> </div>
+  return <React.Fragment> {children} <img alt='' ref={imgRef} /> </React.Fragment>
 }
