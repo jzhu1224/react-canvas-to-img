@@ -12,7 +12,7 @@ export const CanvasToImg = ({children}: ICanvasToImgProps) => {
     if(!imgRef.current) {
       return;
     }
-    const canvas = document.getElementsByTagName('canvas')[0]
+    const canvas = imgRef.current.previousElementSibling as HTMLCanvasElement
     if(!canvas) {
       return
     }
