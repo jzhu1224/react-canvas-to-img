@@ -20,7 +20,7 @@ import 'react-canvas-to-img/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <CanvasToImg><canvas></canvas></CanvasToImg>
+    return <CanvasToImg><canvas /></CanvasToImg>
   }
 }
 ```
